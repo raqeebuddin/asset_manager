@@ -1,26 +1,15 @@
-<<<<<<< HEAD
 from django.test import TestCase, Client
-=======
 from django.test import TestCase
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
 from models import *
 import datetime
 
 #NOTE: all test functions must begin with test or it will e ignored
 
 class UserAccountTest(TestCase):
-<<<<<<< HEAD
-=======
-
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
     def setUp(self):
         Username.objects.create(username="RAQ")
 
     def test_username_exist(self):
-<<<<<<< HEAD
-=======
-
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
         user = Username.objects.get(id=1)
         self.assertEquals(user.username, 'RAQ')
 
@@ -62,7 +51,6 @@ class Datein_autoCreation_test(TestCase):
 
     def test_datein_exists(self):
         dateinbutton = Datein.objects.get(id=1)
-<<<<<<< HEAD
         self.assertEqual(dateinbutton.datein, datetime.date.today())
 
 class Url_get_test(TestCase):
@@ -95,6 +83,5 @@ class Laptopform_view(TestCase):
         client=Client()
         laptop_search_url=client.post("ams/laptop_search.html", {'laptopname':laptopname})
         self.assertEqual(laptop_search_url.status_code, 200)'''
-=======
-        self.assertEqual(dateinbutton.datein, datetime.date.today())
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
+      
+

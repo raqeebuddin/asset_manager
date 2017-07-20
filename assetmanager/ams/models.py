@@ -5,11 +5,8 @@ from django.db import models
 # Create your models here.
 
 class Username(models.Model):
-<<<<<<< HEAD
     username = models.CharField(max_length=8)
-=======
     username = models.CharField(max_length=100)
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
 
     def __str__(self):
         return self.username
@@ -21,10 +18,6 @@ class Laptop(models.Model):
         return self.laptopname
 
 class Dateout(models.Model):
-<<<<<<< HEAD
-=======
-	
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
 	dateoutbutton = models.CharField(max_length=1)
 	dateout = models.DateField(auto_now_add = True)
 		
@@ -32,10 +25,6 @@ class Dateout(models.Model):
 		return self.dateout
 
 class Datein(models.Model):
-<<<<<<< HEAD
-=======
-
->>>>>>> c83138fee305aec3c7eb509a23bd1174a861bbf9
 	dateinbutton = models.CharField(max_length=1)
 	datein = models.DateField(auto_now_add = True)
 
