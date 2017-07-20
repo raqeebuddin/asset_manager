@@ -82,7 +82,7 @@ class Laptopform_view(TestCase):
 
     def test_laptopsearch_page_available(self):
         client=Client()
-        laptopsearch_url=client.get('laptopsearch')
+        laptopsearch_url=client.get('/laptopsearch')
         self.assertNotEqual(laptopsearch_url.status_code,404)
 
     '''def setUp(self):
