@@ -75,6 +75,16 @@ class Laptopform_view(TestCase):
         laptopsearch_url=client.get('/laptopsearch')
         self.assertTemplateUsed(laptopsearch_url, 'ams/laptopsearch.html')
 
+    def test_laptopsearch_page_status_code(self):
+        client=Client()
+        laptopsearch_url=client.get('/laptopsearch')
+        self.assertEqual(laptopsearch_url.status_code,200)
+
+    def test_laptopsearch_page_available(self):
+        client=Client()
+        laptopsearch_url=client.get('laptopsearch')
+        self.assertNotEqual(laptopsearch_url.status_code,404)
+
     '''def setUp(self):
         laptop = Laptop.objects.create(laptopname="TB000001")'''
 
