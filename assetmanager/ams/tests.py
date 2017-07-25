@@ -85,13 +85,7 @@ class Laptopform_view(TestCase):
         laptopsearch_url=client.get('/laptopsearch')
         self.assertNotEqual(laptopsearch_url.status_code,404)
 
-    '''def setUp(self):
-        laptop = Laptop.objects.create(laptopname="TB000001")'''
-
-    ''' def test_laptopname_search(self):
-        laptopname=Laptop.objects.get(id=1)
+    def test_laptopsearch_laptopname_redirect(self):
         client=Client()
-        laptop_search_url=client.post("ams/laptop_search.html", {'laptopname':laptopname})
-        self.assertEqual(laptop_search_url.status_code, 200)'''
-      
-
+        laptopsearch_post=client.post('/laptopsearch')
+        self.assertEqual(laptopsearch_post.status_code, 200)
